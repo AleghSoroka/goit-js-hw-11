@@ -44,7 +44,6 @@ ul {
 }
 
 .gallery {
-  position: relative;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
@@ -53,12 +52,11 @@ ul {
   gap: var(--indent);
 }
 
-.gallery .gallery-item {
+.gallery-item {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1))/var(--items) - 2px);
- 
   object-fit: cover;
   overflow: hidden;
-  background-color: #efeded;
+  background-color: #f6f4f4;
   border: 1px solid #242424 ;
   border-radius: 8px;
   max-height: 400px;
@@ -78,7 +76,11 @@ ul {
 }
 
   .main-info{
-    font-size: medium;
+    font-size: 14px;
+  }
+
+  .info{
+    font-size: inherit;
   }
 
 input {

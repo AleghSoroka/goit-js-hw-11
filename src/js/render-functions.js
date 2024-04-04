@@ -13,8 +13,6 @@ export function imagesRender(array) {
 
   <a class = "gallery-link" href="${largeImageURL}">
     <img
-    width = "360"
-    height = "200"
     src = "${webformatURL}" 
     alt="${tags}"
     class="gallery-image"
