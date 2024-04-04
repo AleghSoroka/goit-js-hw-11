@@ -10,14 +10,13 @@
   <body>
     <form name = "query_form" class ="user_request_form" autocomplete="off">
 
-        <input class = "query_input" type="text" name="user_query" maxlength="100" placeholder="Search for images..."/>
+        <input class = "query_input" type="text" name="user_query" maxlength="100" placeholder="Search images by keywords..."/>
 
-        <button class="btn query_btn" type="submit">Search</button>
+        <button class="btn" type="submit">Search</button>
     </form>
 
-    <ul class="list gallery"></ul>
-    
-    <span class="loading"></span>>
+    <ul class="gallery list"></ul>
+    <span class="loader"></span>
 
     <script type="module" src="./main.js"></script>
     <script type="module" src="./js/pixabay-api.js"></script>

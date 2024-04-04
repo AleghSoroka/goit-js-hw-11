@@ -22,4 +22,146 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --indent: 12px;
+  --items: 4;
+}
+
+.user_request_form{
+  display: flex;
+  justify-content: center;
+  gap: var(--indent);
+  margin: 12px auto;
+ }
+
+ ::placeholder{
+  color: gray;
+ }
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.gallery {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:flex-end;
+  gap: var(--indent);
+}
+
+.gallery .gallery-item {
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1))/var(--items) - 2px);
+ 
+  object-fit: cover;
+  overflow: hidden;
+  background-color: #efeded;
+  border: 1px solid #242424 ;
+  border-radius: 8px;
+  max-height: 400px;
+}
+
+.gallery-item img {
+  max-width: 100%;
+ }
+
+.info-list{
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  text-align: center;
+  justify-items: center;
+  padding: 8px;
+}
+
+  .main-info{
+    font-size: medium;
+  }
+
+input {
+  display: block;
+  min-width: 300px;
+  padding: 8px 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5em;
+  letter-spacing: 0.04em;
+}
+
+.btn {
+  max-width: fit-content;
+  padding: 8px 16px;
+  background-color: #4E75FF;
+  border-radius: 8px;
+  border-color: transparent;
+  font-size: inherit;
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: #6C8CFF;
+}
+
+.loader {
+  visibility: hidden;
+  width: 48px;
+  height: 48px;
+  border: 3px dotted #FFF;
+  border-style: solid solid dotted dotted;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 2s linear infinite;
+}
+#elem-to-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px dotted #ff8c00;
+  border-style: solid solid dotted;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  animation: rotationBack 4s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }

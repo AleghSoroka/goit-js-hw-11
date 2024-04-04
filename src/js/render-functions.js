@@ -8,29 +8,37 @@ export function imagesRender(array) {
         views,
         comments,
         downloads,
-    }) => { return `<li class = "list-item">
+    }) => {
+        return `<li class = "gallery-item">
+
   <a class = "gallery-link" href="${largeImageURL}">
-    <img src = "${webformatURL}"  alt="${tags}" class="gallery-image">
+    <img
+    width = "360"
+    height = "200"
+    src = "${webformatURL}" 
+    alt="${tags}"
+    class="gallery-image"
+    />
   </a>
 
-  <ul class = "information-list">
+  <ul class = "info-list">
 
-    <li class="item-information-container">
+    <li class="info-container">
       <h2 class="main-info">Likes </h2>
       <p class="info">${likes}</p>
     </li>
 
-    <li class="item-information-container">
+    <li class="info-container">
       <h2 class="main-info"> Views </h2>
       <p class="info">${views}</p>
     </li>
 
-    <li class="item-information-container">
+    <li class="info-container">
       <h2 class="main-info">Comments </h2>
       <p class="info">${comments}</p>
     </li>
 
-    <li class="item-information-container">
+    <li class="info-container">
       <h2 class="main-info">Downloads </h2>
       <p class="info">${downloads}</p>
     </li>
