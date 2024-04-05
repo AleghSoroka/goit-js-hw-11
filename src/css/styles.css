@@ -24,7 +24,7 @@
   -webkit-text-size-adjust: 100%;
 
   --indent: 12px;
-  --items: 3;
+  --items: 4;
 }
 
 .user_request_form{
@@ -48,11 +48,15 @@ ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items:flex-end;
+  align-items:stretch;
   gap: var(--indent);
 }
 
 .gallery-item {
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end;
+
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1))/var(--items) - 2px);
   object-fit: cover;
   overflow: hidden;
@@ -63,13 +67,14 @@ ul {
 }
 
 .gallery-item img {
+  display: block;
   max-width: 100%;
  }
 
 .info-list{
   display: flex;
   justify-content:space-between;
-  align-items:center;
+  align-items:flex-end;
   text-align: center;
   justify-items: center;
   padding: 8px;
